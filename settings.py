@@ -8,7 +8,7 @@ Authored by Iazma
 USER = ''
 PASS = ''
 ADMIN_ROLE = ''
-CHANNEL_REQUIRED_MSG = 'This must be performed in a channel.
+CHANNEL_REQUIRED_MSG = 'This must be performed in a channel.'
 UNAUTHORIZED_MSG = 'You don\'t have the required permissions to do that.'
 
 try:
