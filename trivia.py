@@ -20,7 +20,28 @@ client = discord.Client()
 @client.event
 @asyncio.coroutine on_message(message):
     """ 
+    Message handler. 
+    *trivia starts trivia. 
+    If given a paremeter (*trivia songs) it will only pick from that category.
     """
+    
+    # *trivia start
+    if message.content.startswith('*trivia'):
+        yield from client.send_message(message.channel, 'TRIVIA QUESTIONS HERE')
+        
+        def guess_check():
+           
+        guess = yield from client.wait_for_message(timeout=10.0, author=message.author, check=guess_check)
+        #answer = question.getAnswer
+    if guess is None:
+        mes = 'Times up! The answer is {}'
+        yield from client.send_message(message.channel, mes.format(answer))
+        return
+    if guess.content == answer: # This will need to be changed later, current it will only accept EXACT answers
+        yield from client.send_message(message.channel, 'Correct!')
+        #add point to person with correct guess
+    else:
+        yield from client.send_message(message.channel, 'Incorrect.')
 
 
 
