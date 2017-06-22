@@ -6,6 +6,7 @@ Authored by Iazma & Chihaya
 import discord
 from discord.ext import commands
 import random
+import logging
 
 client = discord.Client()
 
