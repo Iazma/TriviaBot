@@ -1,12 +1,13 @@
+'''
+Anime Trivia Bot
+Created 6/22
+Authored by Iazma & Chihaya
+'''
 import discord
 from discord.ext import commands
 import random
 
-description = '''Trying a basic bot out
-
-There are a few things to work on.'''
-
-bot = commands.Bot(command_prefix='?', description = description)
+client = discord.Client()
 
 @bot.event
 async def on_ready():
@@ -17,3 +18,10 @@ async def on_ready():
     
 @bot.command
 async def 
+
+
+
+if __name__ == '__main__':
+    client.login(settings.USER, settings.PASS)
+    logging.basicConfig(level=logging.INFO)
+    client.run()
