@@ -6,6 +6,7 @@ Authored by Iazma & Chihaya
 import discord
 import logging
 import settings
+import asyncio
 from actions import commands
 
 client = discord.Client()
